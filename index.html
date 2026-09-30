@@ -146,6 +146,9 @@ footer a:hover { text-decoration: underline; }
 }
 :root { color-scheme: dark; }
 :root[data-theme="light"] { color-scheme: light; }
+
+/* Footer links are underlined so they never rely on colour alone (WCAG 1.4.1). */
+footer a { text-decoration: underline; text-underline-offset: 0.15em; }
 </style>
 </head>
 <body>
@@ -167,9 +170,9 @@ footer a:hover { text-decoration: underline; }
     <div class="card-desc">The classic. Find a percentage of a number.</div>
     <div class="row">
       <span>What is</span>
-      <input type="number" id="a1" value="15" step="any" inputmode="decimal">
+      <input type="number" id="a1" aria-label="Percent (X)" value="15" step="any" inputmode="decimal">
       <span>percent of</span>
-      <input type="number" id="a2" value="200" step="any" inputmode="decimal">
+      <input type="number" id="a2" aria-label="Number (Y)" value="200" step="any" inputmode="decimal">
       <span>?</span>
     </div>
     <div class="answer" id="ans-a"></div>
@@ -179,9 +182,9 @@ footer a:hover { text-decoration: underline; }
     <div class="card-title">X is what percent of Y?</div>
     <div class="card-desc">Turn a part and a whole into a percentage.</div>
     <div class="row">
-      <input type="number" id="b1" value="30" step="any" inputmode="decimal">
+      <input type="number" id="b1" aria-label="Part (X)" value="30" step="any" inputmode="decimal">
       <span>is what percent of</span>
-      <input type="number" id="b2" value="200" step="any" inputmode="decimal">
+      <input type="number" id="b2" aria-label="Whole (Y)" value="200" step="any" inputmode="decimal">
       <span>?</span>
     </div>
     <div class="answer" id="ans-b"></div>
@@ -192,9 +195,9 @@ footer a:hover { text-decoration: underline; }
     <div class="card-desc">Growth or drop between two values.</div>
     <div class="row">
       <span>From</span>
-      <input type="number" id="c1" value="80" step="any" inputmode="decimal">
+      <input type="number" id="c1" aria-label="Starting value (X)" value="80" step="any" inputmode="decimal">
       <span>to</span>
-      <input type="number" id="c2" value="100" step="any" inputmode="decimal">
+      <input type="number" id="c2" aria-label="Ending value (Y)" value="100" step="any" inputmode="decimal">
     </div>
     <div class="answer" id="ans-c"></div>
   </div>
@@ -203,9 +206,9 @@ footer a:hover { text-decoration: underline; }
     <div class="card-title">Increase or decrease by a percent</div>
     <div class="card-desc">Apply a percentage change to a number.</div>
     <div class="row">
-      <input type="number" id="d1" value="50" step="any" inputmode="decimal">
+      <input type="number" id="d1" aria-label="Number" value="50" step="any" inputmode="decimal">
       <span>changed by</span>
-      <input type="number" id="d2" value="20" step="any" inputmode="decimal">
+      <input type="number" id="d2" aria-label="Percent change (negative to decrease)" value="20" step="any" inputmode="decimal">
       <span>percent</span>
     </div>
     <div class="answer" id="ans-d"></div>
